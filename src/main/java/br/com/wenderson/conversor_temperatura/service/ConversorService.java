@@ -13,9 +13,16 @@ public class ConversorService {
        }
 
        if (escala.equals("fahrenheit")){
-           return (temperatura - 32) * 5 / 9;
+           return (temperatura - 32) * 5/9;
        }
 
+       if (escala.equals("kelvin/celsius")) {
+           return (temperatura) + 273.15;
+       }
+
+       if (escala.equals("kelvin/fahrenheit")) {
+           return (temperatura - 32) * 5/9 + 273.15;
+       }
        return temperatura;
-   }
+    }
 }
